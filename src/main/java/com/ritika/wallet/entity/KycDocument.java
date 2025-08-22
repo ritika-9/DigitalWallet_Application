@@ -28,6 +28,7 @@ public class KycDocument {
     private String documentReference; // filename or external id
 
     @Column(nullable = false, length = 20)
+    @Builder.Default
     private String status = "PENDING"; // PENDING / APPROVED / REJECTED
 
     @Column(name = "uploaded_at", nullable = false)
